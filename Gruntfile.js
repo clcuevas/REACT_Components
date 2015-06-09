@@ -8,10 +8,18 @@ module.exports = function(grunt) {
   grunt.initConfig({
     webpack: {
       client: {
-        entry: __dirname + '/app/js/client.js',
+        entry: __dirname + '/app/js/client.jsx',
         output: {
           path: 'build/',
           file: 'bundle.js'
+        },
+        module: {
+          loaders: [
+            {
+              test: /\.jsx$/,
+              loader: 'jsx-loader'  
+            }
+          ]
         }
       },
       test: {
@@ -41,6 +49,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', ['webpack:client', 'webpack:test', 'copy:html']);
+  //removed 'webpack:test' from build since testing environment has not been setup
+  grunt.registerTask('build', ['webpack:client', 'copy:html']);
   grunt.registerTask('default', ['build']);
 };
