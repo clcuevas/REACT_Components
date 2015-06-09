@@ -7,7 +7,7 @@ var Pet = require('./pet.jsx');
 module.exports = React.createClass({
   renderPets: function() {
     return this.props.data.map(function(pet) {
-      return <Pet data={pet.name} key={pet._id} />;
+      return <Pet data={pet} key={pet._id} />;
     });
   },
   render: function() {
