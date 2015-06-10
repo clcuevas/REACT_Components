@@ -1,0 +1,35 @@
+/* 
+BACKGROUND COLOR: #E0EEEE;
+Intro H1 COLOR: #2F4F4F;
+*/
+
+body {
+	margin: 0 auto;
+	background-color: #E0EEEE;
+	font-family: 'PT Sans Narrow';
+	font-size: 18px;
+	width: 80%;
+}
+
+#Intro h1 {
+	text-align: center;
+	color: #2F4F4F;
+	font: bold;
+}
+
+#MyList {
+	text-align: center;
+	background-color: #9FB6CD;
+}
+
+#MyList h2 {
+	color: #2F4F4F;
+}
+
+#MyList ul {
+	list-style: none;
+}
+
+#MyList ul li {
+	padding: 5px;
+}

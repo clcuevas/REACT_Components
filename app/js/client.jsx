@@ -6,7 +6,7 @@ var request = require('superagent');
 
 var App = React.createClass({
   getInitialState: function() {
-    return {pets: [], title: 'Pets:'};
+    return {pets: [], title: 'Pet Listing'};
   },
 
   componentDidMount: function() {
@@ -24,7 +24,7 @@ var App = React.createClass({
   render: function() {
     return (
       <main>
-        <h1>{this.state.title}</h1>
+        <h2>{this.state.title}</h2>
         <PetList data={this.state.pets} />
       </main>
     );
