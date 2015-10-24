@@ -10,6 +10,7 @@ var petRoutes = express.Router();
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/pet_development');
 
 app.use(express.static(__dirname + '/build'));
+app.use(express.static(__dirname + '/app'));
 
 require('./routes/pet_routes.js')(petRoutes);
 
